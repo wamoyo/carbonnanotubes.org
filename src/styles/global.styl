@@ -1,8 +1,90 @@
 
 // ==========================================================================
-// All Site Wide Styles (fonts, typogaphy, buttons, forms, etc)
+// All Site-Wide Styles (fonts, typography, buttons, forms, etc)
 // ==========================================================================
 
-body
-  background red
+@import 'colors.styl'
+
+/* Some universals */
+
+* { box-sizing: border-box; transition: 1s; }
+
+/* Ubuntu fonts */
+
+@font-face
+  font-family 'Ubuntu'
+  src url('../../public/fonts/ubuntu/Ubuntu-Regular.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Regular.woff') format('woff')
+  font-weight normal
+  font-style normal
+
+@font-face
+  font-family 'Ubuntu Thin'
+  src url('../../public/fonts/ubuntu/Ubuntu-Thin.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Thin.woff') format('woff')
+  font-weight 200
+  font-style normal
+
+@font-face
+  font-family 'Ubuntu Light'
+  src url('../../public/fonts/ubuntu/Ubuntu-Light.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Light.woff') format('woff')
+  font-weight bold
+  font-style normal
+
+@font-face
+  font-family 'Ubuntu Thin'
+  src url('../../public/fonts/ubuntu/Ubuntu-Medium.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Medium.woff') format('woff')
+  font-weight bold
+  font-style normal
+
+@font-face
+  font-family 'Ubuntu Thin' /* Fix This */
+  src url('../../public/fonts/ubuntu/Ubuntu-Light-Italic.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Light-Italic.woff') format('woff')
+  font-weight 200
+  font-style italic
+
+@font-face
+  font-family 'Ubuntu'
+  src url('../../public/fonts/ubuntu/Ubuntu-Bold.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Bold.woff') format('woff')
+  font-weight bold
+  font-style normal
+
+/* Links and Buttons */
+
+a.button
+  display inline-block
+  width auto
+  text-decoration none
+  border 2px solid bg
+  padding 1rem 2rem 1.25rem 2rem
+  color black
+  border-radius .5rem
+  background bg
+  font-family 'Ubuntu'
+  font-variant small-caps
+  font-weight normal
+  transition 1s
+
+a.button-light
+  background cloud
+  border 2px solid black
+
+a.button:focus
+a.button:hover
+  outline none
+  border 2px solid hover
+  background hover
+
+a.button-light:focus
+a.button-light:hover
+  color grey
+  border 2px solid grey
+  background cloud !important
+
+a.button:active
+  background active
+
+a.button-light:active
+  color bg
+  border 2px solid bg
+  background cloud
+
 
