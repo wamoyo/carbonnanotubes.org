@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "astro": "^1.7.1"
+  },
+  "devDependencies": {
+    "stylus": "^0.59.0"
   }
 }

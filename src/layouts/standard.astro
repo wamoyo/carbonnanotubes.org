@@ -1,0 +1,29 @@
+
+---
+import '../styles/global.styl'
+import '../styles/standard.styl'
+import IndexSeo from '../components/IndexSeo.astro'
+
+var { title = 'CarbonNanotubes.org' } = Astro.props
+var { description = 'We make the strongest material on Earth. Order yours today...' } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <link rel="canonical" href="https://carbonnanotubes.org">
+
+    <IndexSeo />
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <slot />
+  </body>
+<html>
+
