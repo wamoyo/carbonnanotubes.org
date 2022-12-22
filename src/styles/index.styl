@@ -43,7 +43,7 @@ img
 
 /* Banner Section and subsequent sections */
 
-section#title div.bg-cnt-img:before
+section#title div.bg-cnt-img::before
   content ''
   position fixed
   top 0px
@@ -122,7 +122,7 @@ section#banner
     text-align left
     background white
 
-  section#title:before
+  section#title::before
     width 50vw
 
   section#title p.subtitle
@@ -138,7 +138,7 @@ section#banner
     margin-right 5rem
     max-width 500px
 
-  section#title h1:before
+  section#title h1::before
     content ''
     position absolute
     right -2rem
@@ -148,7 +148,7 @@ section#banner
     border-radius 50%
     background black
 
-  section#title h1:after
+  section#title h1::after
     content ''
     position absolute
     right -3.75rem
@@ -161,7 +161,7 @@ section#banner
 
   section#title { position:relative;}
 
-  section#title:after
+  section#title::after
     content ''
     position absolute
     right 2.25rem
@@ -181,7 +181,7 @@ section#banner
     position relative
     margin-top .75rem
 
-  section.left h2:before
+  section.left h2::before
     content ''
     position absolute
     right -2rem
@@ -191,7 +191,7 @@ section#banner
     border-radius 50%
     background black
 
-  section.left h2:after
+  section.left h2::after
     content ''
     position absolute
     right -3.75rem
@@ -204,7 +204,7 @@ section#banner
 
   section.left { position:relative;}
 
-  section.left:after
+  section.left::after
     content ''
     position absolute
     right 2.25rem
@@ -214,10 +214,10 @@ section#banner
     background black
     z-index 3
 
-  section.left.last:after
+  section.left.last::after
     height 80%
 
-  section.left.last:before
+  section.left.last::before
     content ''
     position absolute
     right 2rem
@@ -235,22 +235,22 @@ section#banner
   section.right
     padding 7.5rem 4.24rem 8rem 4.25rem
 
-  section#title:after
-  section.left:after
+  section#title::after
+  section.left::after
     right 4.25rem
 
   section#title p.subtitle
     position absolute
     right 3.25rem
 
-  section.left.last:before
+  section.left.last::before
     right 4rem
 
 @media all and (min-width: 1600px)
 
   body { font-size: 150%; }
 
-  section#title:after
+  section#title::after
     top calc(50% + .4rem)
 
 

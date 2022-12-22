@@ -1,0 +1,54 @@
+
+---
+import Layout from '../layouts/page.astro'
+import PageSeo from '../components/PageSeo.astro'
+
+var { page = {} } = Astro.props
+      page.title = '404 - Not Found'
+      page.description = 'The page you requested could not be found. Please check the spelling of the URL.'
+      page.image = 'https://carbonnanotubes.org/images/powdered-tubes.jpg'
+      page.url = 'https://carbonnanotubes.org/404'
+---
+
+<Layout>
+
+  <PageSeo slot='head' {page} />
+
+  <main slot='body'>
+
+    <h1>404 😕 Not Found</h1>
+    <p>Hm... You’ve arrived at a page that does not exist. Computers are a bit literal, try checking the spelling of the link you typed.</p>
+    <p>It’s also possible we removed an old page. Go ahead and click ‘CarbonNanotubes.org’ at the top to return to the homepage.</p>
+    <p>Feel free to contact us at <a href="mailto:info@carbonnanotubes.org?subject=404 Page Error">info@carbonnanotubes.org</a> and we'll help you track down what you were looking for.</p>
+
+    <section style="text-align:left;max-width:1100px;margin:auto;">
+      <h1>Page Elements</h1>
+      <p><strong>Let's try out setting a 100% body font size. Then using em's for fonts, and rem's for everything else. Then! Let's try kicking the root font size up at various large monitor breakpoints like 120% at 1400px and 150% at 2000px body width.</strong></p>
+      <p>Let's test out some page elements... </p>
+      <p><strong>Pellentesque habitant morbi tristique</strong>senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Em Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, code commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href='#'>Donec non enim in turpis pulvinar facilisis. Ut felis.</a>
+      <h2>Header Level 2</h2>
+      <h3>Header Level 3</h3>
+      <h4>Header Level 4</h4>
+      <h5>Header Level 5</h5>
+      <h6>Header Level 6</h6>
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Three Aliquam tincidunt mauris eu risus.</li>
+        <li>Four Aliquam tincidunt mauris eu risus.</li>
+      </ol>
+      <blockquote>
+        <p>And QUTOES Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+      </blockquote>
+      <h3>Let's try some lists</h3>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+    </section>
+
+  </main>
+
+</Layout>
+

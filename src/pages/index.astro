@@ -3,13 +3,12 @@
 import Layout from '../layouts/index.astro'
 import CntPolyesterMix from '../images/cnt-polyester-mix.jpg'
 import CntThread2 from '../images/CNT-thread-2.jpg'
-var title = 'CarbonNanotubes.org'
 ---
 
-<Layout title="Hello">
+<Layout>
 
   <section class="left" id="title">
-    <div class="bg-cnt-img fadetwo"></div>
+    <div class="bg-cnt-img fadeone"></div>
     <h1 class="small-width slide-in-from-left animate">CarbonNanotubes.org</h1>
     <h1 class="normal-width slide-in-from-left animate"><span id="carbon">carbon</span><span id="nanotubes">nanotubes</span><span id="org">org</span></h1>
     <p class="subtitle slide-in-from-left animate">The Strongest Material On Earth</p>
@@ -27,7 +26,7 @@ var title = 'CarbonNanotubes.org'
     <p class="slide-in-from-right animate"><strong>At 30 times stronger than kevlar,</strong> our long carbon nanotubes are dispersed, workable, and ready for mixing into epoxies and composities.</p>
     <img class="slide-in-from-right animate" src={CntPolyesterMix} alt="">
     <p class="slide-in-from-right animate"><strong>Short carbon nanotubes (&lt;100 microns) pull out</strong> of expoxies and other materials. Long (1 mm to 2 cm), strong carbon nanotubes form a complete, intertwined mesh of support and can not pull out. Their strength is transferred to the matrix making it stiffer and stronger.</p>
-    <a class="button slide-in-from-right animate" href="/long-carbon-nanotubes-for-composites">learn more »</a>
+    <a class="button slide-in-from-right animate" href="/articles/long-carbon-nanotubes-for-composites">learn more »</a>
   </section>
 
   <section class="left">
@@ -56,7 +55,7 @@ var title = 'CarbonNanotubes.org'
       <li class="slide-in-from-right animate">From 1 mm up to 2 cm long</li>
     </ul>
     <p class="slide-in-from-right animate">Imagine a plane twice the size and half the weight of a 747, an untwistable golf club, an unbendable tennis racket, an inflatable space habitat system. Carbon nanotubes can enable each of these and more.</p>
-    <a class="button slide-in-from-right animate" href="/the-material-of-the-future">learn more »</a>
+    <a class="button slide-in-from-right animate" href="/articles/the-material-of-the-future">learn more »</a>
   </section>
 
   <!-- <section class="left"> -->
@@ -66,7 +65,7 @@ var title = 'CarbonNanotubes.org'
   <!-- <section class="right"> -->
   <!--   <p><strong>For a deep dive into the technicals,</strong> watch this interview with our founder, Dr. Bradley Edwards, where we cover the features of carbon nanotubes and the physics behind their impressive traits. We also bust a number of myths about carbon nanotubes, and explore just a few of many possible applications across industries.</p> -->
   <!--   <p> -->
-  <!--     <a class="button" href="/technical-deep-dive">watch now »</a> -->
+  <!--     <a class="button" href="/articles/technical-deep-dive">watch now »</a> -->
   <!--   </p> -->
   <!-- </section> -->
 
@@ -238,12 +237,12 @@ var title = 'CarbonNanotubes.org'
     transform: translate(100px);
   }
 
-  .fadetwo {
-    animation: fadetwo 2.5s;
+  .fadeone {
+    animation: fadeone 1.5s;
     transition: .75s;
   }
 
-  @keyframes fadetwo {
+  @keyframes fadeone {
     0% { opacity: 0; }
     20% { opacity: 0; }
     100% { opacity: 1; }

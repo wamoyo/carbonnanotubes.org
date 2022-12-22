@@ -1,34 +1,43 @@
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": "Industrial CNT LLC",
-    "image": "https://carbonnanotubes.org/images/powered-tubes.jpg",
-    "url": "https://carbonnanotubes.org",
-    "logo": "https://carbonnanotubes.org/images/industrial-cnt-logo.png",
-    "email": "Nanoline <info@carbonnanotubes.org>",
-    "telephone": "+1-212-602-1401"/*,
-    "sameAs": [
-      "https://www.linkedin.com/company/.......", // TODO
-      "https://twitter.com/........", // TODO
-      "https://www.youtube.com/c/........" // TODO
-    ]*/
-  }
-</script>
+---
+var { homepage } = Astro.props
+var schema = `{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Industrial CNT LLC",
+      "image": "https://carbonnanotubes.org/images/powdered-tubes.jpg",
+      "url": "https://carbonnanotubes.org",
+      "logo": "https://carbonnanotubes.org/images/industrial-cnt-logo.png",
+      "email": "CarbonNanotubes.org <info@carbonnanotubes.org>",
+      "telephone": "+1-212-602-1401",
+      "sameAs": [
+        "https://www.linkedin.com/company/.......",
+        "https://twitter.com/........",
+        "https://www.youtube.com/c/........"
+      ]
+    }`
+---
 
-<meta property="og:title" content="CarbonNanotubes.org">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://carbonnanotubes.org/images/powered-tubes.jpg">
-<meta property="og:image:secure_url" content="https://carbonnanotubes.org/images/powered-tubes.jpg">
-<meta property="og:description" content="Carbon nanotubes are the material of the future, and we're making it happen! Join us to learn more, sample our products, and build best-in-class products and materials with them.">
-<meta property="og:url" content="https://carbonnanotubes.org">
-<meta property="og:site_name" content="CarbonNanotubes.org">
-<meta property="og:locale" content="en_US">
+    <title>{homepage.title}</title>
+    <meta name="description" content={homepage.description}>
+    <link rel="canonical" href={homepage.url}>
 
-<meta name="twitter:card" content="summary_large_image">
-<!-- <!-1- TODO -1-> <meta name="twitter:site" content="@Nanoline"> -->
-<meta name="twitter:title" content="CarbonNanotubes.org">
-<meta name="twitter:description" content="Carbon nanotubes are the material of the future, and we're making it happen! Join us to learn more, sample our products, and build best-in-class products and materials with them.">
-<meta name="twitter:image" content="https://www.innovationbound.com/images/powered-tubes.jpg">
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={schema}></script>
 
+    <!-- Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={homepage.title}>
+    <meta property="og:image" content={homepage.image}>
+    <meta property="og:image:secure_url" content={homepage.image}>
+    <meta property="og:description" content={homepage.description}>
+    <meta property="og:url" content={homepage.url}>
+    <meta property="og:site_name" content="CarbonNanotubes.org">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- TODO <meta name="twitter:site" content="@CarbonNanotubesOrg"> -->
+    <meta name="twitter:title" content={homepage.title}>
+    <meta name="twitter:description" content={homepage.description}>
+    <meta name="twitter:image" content={homepage.image}>

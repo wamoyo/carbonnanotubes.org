@@ -5,11 +5,17 @@
 
 @import 'colors.styl'
 
+
+
 /* Some universals */
 
-* { box-sizing: border-box; transition: 1s; }
+*, *::before, *::after { box-sizing: border-box; transition: 1s; }
+body { margin: 0; padding: 0; font-weight: normal; word-wrap: break-word; scroll-behavior: smooth; overflow-anchor: none; }
+img { max-width: 100%; height: auto; }
 
-/* Ubuntu fonts */
+
+
+/* Fonts */
 
 @font-face
   font-family 'Ubuntu'
@@ -46,6 +52,35 @@
   src url('../../public/fonts/ubuntu/Ubuntu-Bold.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Bold.woff') format('woff')
   font-weight bold
   font-style normal
+
+
+
+/* Body Styles */
+
+// body
+//   font-size 100%
+
+// @media all and (min-width: 1350px) { body {font-size: 120%;} }
+// @media all and (min-width: 1750px) { body {font-size: 140%;} }
+// @media all and (min-width: 2150px) { body {font-size: 160%;} }
+
+
+
+
+/* Typography */
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.75em;}
+h3 {font-size: 1.53em;}
+h4 {font-size: 1.34em;}
+h5 {font-size: 1.17em;}
+h6 {font-size: 1.02em;}
+
+
+
+
+
+
 
 /* Links and Buttons */
 
@@ -86,5 +121,4 @@ a.button-light:active
   color bg
   border 2px solid bg
   background cloud
-
 

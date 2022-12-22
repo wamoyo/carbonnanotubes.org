@@ -1,0 +1,35 @@
+
+---
+var { page } = Astro.props
+var schema = `{
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "name": "${page.title}",
+      "image": "${page.image}",
+      "url": "${page.url}"
+    }`
+---
+
+    <title>{page.title}</title>
+    <meta name="description" content={page.description}>
+    <link rel="canonical" href={page.url}>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={schema}></script>
+
+    <!-- Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={page.title}>
+    <meta property="og:image" content={page.image}>
+    <meta property="og:image:secure_url" content={page.image}>
+    <meta property="og:description" content={page.description}>
+    <meta property="og:url" content={page.url}>
+    <meta property="og:site_name" content="CarbonNanotubes.org">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- TODO <meta name="twitter:site" content="@CarbonNanotubesOrg"> -->
+    <meta name="twitter:title" content={page.title}>
+    <meta name="twitter:description" content={page.description}>
+    <meta name="twitter:image" content={page.image}>

@@ -1,0 +1,33 @@
+
+---
+import '../styles/global.styl'
+import '../styles/page.styl'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <slot name='head' />
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <a href="/">CarbonNanotubes.org</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <slot name='body' />
+
+    <footer>
+      <p id="copyright">© {new Date().getFullYear()} Industrial CNT LLC</p>
+    </footer>
+  </body>
+<html>
+
