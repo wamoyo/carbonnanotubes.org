@@ -105,6 +105,16 @@ em { font-family: 'Ubuntu Thin'; font-style: italic; }
 
 /* Links and Buttons */
 
+a
+  color black
+  text-decoration underline
+  transition .2s
+
+a:visited
+  color grey
+
+
+
 a.button
   display inline-block
   width auto
@@ -120,8 +130,18 @@ a.button
   transition 1s
 
 a.button-light
+  display inline-block
+  width auto
+  text-decoration none
+  padding 1rem 2rem 1.25rem 2rem
+  color black
+  border-radius .5rem
+  font-family 'Ubuntu'
+  font-variant small-caps
+  font-weight normal
+  transition 1s
   background cloud
-  border 2px solid black
+  border 2px solid lightGrey
 
 a.button:focus
 a.button:hover
