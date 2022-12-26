@@ -19,37 +19,37 @@ img { max-width: 100%; height: auto; }
 
 @font-face
   font-family 'Ubuntu'
-  src url('../../public/fonts/ubuntu/Ubuntu-Regular.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Regular.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Regular.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Regular.woff') format('woff')
   font-weight normal
   font-style normal
 
 @font-face
   font-family 'Ubuntu Thin'
-  src url('../../public/fonts/ubuntu/Ubuntu-Thin.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Thin.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Thin.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Thin.woff') format('woff')
   font-weight 200
   font-style normal
 
 @font-face
   font-family 'Ubuntu Light'
-  src url('../../public/fonts/ubuntu/Ubuntu-Light.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Light.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Light.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Light.woff') format('woff')
   font-weight bold
   font-style normal
 
 @font-face
   font-family 'Ubuntu Thin'
-  src url('../../public/fonts/ubuntu/Ubuntu-Medium.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Medium.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Medium.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Medium.woff') format('woff')
   font-weight bold
   font-style normal
 
 @font-face
   font-family 'Ubuntu Thin' /* Fix This */
-  src url('../../public/fonts/ubuntu/Ubuntu-Light-Italic.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Light-Italic.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Light-Italic.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Light-Italic.woff') format('woff')
   font-weight 200
   font-style italic
 
 @font-face
   font-family 'Ubuntu'
-  src url('../../public/fonts/ubuntu/Ubuntu-Bold.woff2') format('woff2'), url('../../public/fonts/ubuntu/Ubuntu-Bold.woff') format('woff')
+  src url('/fonts/ubuntu/Ubuntu-Bold.woff2') format('woff2'), url('/fonts/ubuntu/Ubuntu-Bold.woff') format('woff')
   font-weight bold
   font-style normal
 
@@ -57,8 +57,9 @@ img { max-width: 100%; height: auto; }
 
 /* Body Styles */
 
-// body
-//   font-size 100%
+body
+  font-size 100%
+  min-width 320px
 
 // @media all and (min-width: 1350px) { body {font-size: 120%;} }
 // @media all and (min-width: 1750px) { body {font-size: 140%;} }
@@ -69,12 +70,29 @@ img { max-width: 100%; height: auto; }
 
 /* Typography */
 
-h1 {font-size: 2em;}
-h2 {font-size: 1.75em;}
-h3 {font-size: 1.53em;}
-h4 {font-size: 1.34em;}
-h5 {font-size: 1.17em;}
-h6 {font-size: 1.02em;}
+body {line-height: 1.75;}
+
+p { font-family: 'Ubuntu Thin'; font-weight: 200; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Ubuntu'; font-weight: normal; line-height: 1; }
+
+h1 { font-size: 4em; font-weight: bold; }
+h2 { font-size: 1.75em; font-variant: small-caps; font-weight: 300; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.35em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.1em; }
+
+p.small { font-size: .7em; }
+p.med { font-size: 1.2em; }
+
+ul li { font-family: 'Ubuntu Thin'; font-weight: 200; list-style-type: circle; }
+
+strong { font-family: 'Ubuntu'; font-weight: normal; }
+
+em { font-family: 'Ubuntu Thin'; font-style: italic; }
+
+
 
 
 
